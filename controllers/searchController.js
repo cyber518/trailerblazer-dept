@@ -6,7 +6,7 @@ module.exports.search_post = function (req, res, next) {
     //Define Authorization key for API
     var config = {
         headers: {
-            Authorization: process.env.AUTH_KEy
+            Authorization: process.env.AUTH_KEY
         }
     }
     
