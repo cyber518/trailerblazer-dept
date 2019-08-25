@@ -8,7 +8,7 @@ A movie trailer API project that serves Youtube video trailer ID's and titles fo
 404 Not Found - Resource was not found.
 
 ## Routes
-  Main URL: `https://trailerblazer-web.herokuapp.com/contact`  
+  Main URL: `https://trailerblazer-web.herokuapp.com`  
   Contact (Request Trailer) URL: `https://trailerblazer-web.herokuapp.com/contact` (GET)
  
  
