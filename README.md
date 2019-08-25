@@ -1,6 +1,6 @@
 # trailerblazer
 
-A movie trailer API project that serves Youtube video trailer ID's and titles for requested string.
+A movie trailer search web site project.
 
 ## Server Responses
 
@@ -9,6 +9,6 @@ A movie trailer API project that serves Youtube video trailer ID's and titles fo
 
 ## Routes
   Main URL: `https://trailerblazer-web.herokuapp.com`  
-  Contact (Request Trailer) URL: `https://trailerblazer-web.herokuapp.com/contact` (GET)
+  Contact (Request Trailer) URL: `https://trailerblazer-web.herokuapp.com/contact`
  
  
