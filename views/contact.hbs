@@ -1,0 +1,65 @@
+{{> header}}
+<div class="card contact-us">
+    <div class="card-body contact-us center">
+        <img src="/images/request-trailer.png" alt="Contact Us" class="contact-us-img">
+        
+        {{#if success}}
+            <p>Success</p>
+        {{else}}
+            {{#if errors}}
+                {{#each errors}}
+                    <p>Wrong Email</p>
+                {{/each}}
+            {{/if}}
+        {{/if}}
+
+        <section class="mb-4">
+            <div class="row">
+                <div class="col-md-9 mb-md-0 mb-5">
+                    <form id="contact-form" name="contact-form" action="/contact" method="POST">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="name" name="name" class="form-control" value="{{#if name}} {{name}} {{/if}}">
+                                    <label for="name" class="">Your name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="email" name="email" class="form-control" value="{{#if email}} {{email}} {{/if}}">
+                                    <label for="email" class="">Your email</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="trailer" name="trailer" class="form-control" value="{{#if trailer}} {{trailer}} {{/if}}">
+                                    <label for="trailer" class="">Request Trailer</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="recaptha-error">
+                            <span class="recaptha-error-message"></span>
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="{{captchaKey}}" data-callback="verifyCaptcha"></div>
+                        <div id="g-recaptcha-error"></div>
+                    </form>
+
+                    <div class="text-center text-md-left submit-button">
+                        <a class="btn btn-primary disabled" onclick="submitForm()">Send</a>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<form action="/" method="GET" onsubmit="return submitUserForm(this);">
+
+</form>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="/javascripts/components/contactValidation.js"></script>
+{{> footer}}

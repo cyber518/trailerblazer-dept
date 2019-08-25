@@ -1,0 +1,45 @@
+{{> header}}
+{{#if noResult}}
+    <div class="no-result center">
+        <p>There is no result for your search. </p><a href="/">Search again.</a>
+    </div>
+{{else}}
+    {{#each apiResult}}
+        {{#if this.youtubeID}}
+        <div class="card">
+            <iframe width="740" height="416" class="iframe" src="http://www.youtube.com/embed/{{this.youtubeID}}?rel=0" frameborder="0" allowfullscreen></iframe>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-mg-6">
+                        <img src="{{#if this.image}}{{this.image}}{{else}}/images/popcorn.jpg{{/if}}" alt="Poster" class="{{#if this.image}}image-poster{{else}}image-poster-default{{/if}}">
+                    </div>
+                    <div class="col-mg-6 {{#if this.image}}movie-info{{else}}movie-info-default{{/if}}">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <p class="card-text">{{this.year}}</p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a href="https://www.imdb.com/title/{{this.imdbID}}">IMDB Page</a>
+                            </div>
+                            <div class="col-sm-4 social-share-container">
+                                <span>Share on:</span>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/watch?v={{this.youtubeID}}"
+                                    class="fa fa-facebook social-button" target="_blank"></a>
+                                <a class="fa fa-twitter social-button"
+                                    href="https://twitter.com/intent/tweet?text=https://www.youtube.com/watch?v={{this.youtubeID}}"
+                                    data-size="large"></a>
+                            </div>
+                            {{alertURL}}
+                            <div class=" col-sm-4 alert-wrong-trailer">
+                                <button type="button" class="btn btn-link alert-trailer" data-url="{{alertURL}}">Alert Wrong Trailer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    {{/each}}
+{{/if}}
+<script src="/javascripts/components/alertWrongContent.js"></script>
+{{> footer}}
