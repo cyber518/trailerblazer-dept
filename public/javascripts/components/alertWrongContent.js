@@ -10,7 +10,7 @@ $(function() {
              */
             $('.alert-trailer').on('click', function name() {
                 var $this = $(this);
-                var url = "http://localhost:3000/alert";
+                var url = $('.alert-url-data').data('url'); 
     
                 var title = $this.closest('.movie-info').find('.card-title').text();
     

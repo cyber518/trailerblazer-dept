@@ -29,9 +29,8 @@
                                     href="https://twitter.com/intent/tweet?text=https://www.youtube.com/watch?v={{this.youtubeID}}"
                                     data-size="large"></a>
                             </div>
-                            {{alertURL}}
                             <div class=" col-sm-4 alert-wrong-trailer">
-                                <button type="button" class="btn btn-link alert-trailer" data-url="{{alertURL}}">Alert Wrong Trailer</button>
+                                <button type="button" class="btn btn-link alert-trailer">Alert Wrong Trailer</button>
                             </div>
                         </div>
                     </div>
@@ -40,6 +39,7 @@
         </div>
         {{/if}}
     {{/each}}
+    <div class="alert-url-data" data-url="{{alertURL}}"></div>
 {{/if}}
 <script src="/javascripts/components/alertWrongContent.js"></script>
 {{> footer}}
