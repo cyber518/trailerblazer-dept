@@ -29,7 +29,7 @@ API_URL = https://trailerblazer.herokuapp.com
 4) After creating the file, on Command Prompt type `node app.js` or `nodemon app.js` if you are using nodemon to run apps.
 
 
-**IMPORTAN! :** Since Youtube Data V3 API has quota limitations, after 100 requests to Youtube Data V3 API (Each search costs 100 units and quota limit is 10.000 per day), Youtube Data API key should be changed to perform success request (Cached calls by this project not included). If you are using Heroku apps and apps stop working, please inform the project owner for API key change.
+**IMPORTAN! :** Since Youtube Data V3 API has quota limitations, after 10 searches on the page (Each search costs 100 units and quota limit is 10.000 per day, and for each search on the page makes 10 calls to Youtube API), Youtube Data API key should be changed to perform success request (Cached calls by this project not included). If you are using Heroku apps and apps stop working, please inform the project owner for API key change.
 
 Heroku API App URL: http://trailerblazer.herokuapp.com
 
